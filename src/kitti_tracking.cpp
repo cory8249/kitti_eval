@@ -42,6 +42,7 @@ vector<vector<tGroundtruth> > load_tracking_gt(string gt_filename) {
         }
     }
     fclose(fp);
+    printf("gt_all.size() = %d\n", gt_all.size());
     return gt_all;
 }
 
@@ -64,7 +65,7 @@ vector<vector<tDetection> > load_tracking_det(string gt_filename) {
                &frame, &object_id, label, &g.box.alpha,
                &g.box.x1, &g.box.y1, &g.box.x2, &g.box.y2, &g.thresh);
         g.box.type = string(label);
-        if (det_all.size() < frame + 1) {
+        while (det_all.size() < frame + 1) {
             det_all.push_back(vector<tDetection>());
         }
         det_all[frame].push_back(g);
@@ -78,5 +79,6 @@ vector<vector<tDetection> > load_tracking_det(string gt_filename) {
         }
     }
     fclose(fp);
+    printf("det_all.size() = %d\n", det_all.size());
     return det_all;
 }

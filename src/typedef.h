@@ -19,11 +19,7 @@ STATIC EVALUATION PARAMETERS
 
 // holds the number of test images on the server
 // const int32_t N_TESTIMAGES = 7481;
-const int N_TESTIMAGES = 447;
-
-const char CONFIG_RESULT_DIR[] = "/home/cory/kitti_eval";
-const char CONFIG_TRACKING_GT_FILENAME[] = "/home/cory/kitti_eval/label_02/0001.txt";
-const char CONFIG_TRACKING_DET_FILENAME[] = "/home/cory/kitti_eval/kitti_objects.txt";
+const int N_TESTIMAGES = 233;
 
 // easy, moderate and hard evaluation level
 enum DIFFICULTY {
