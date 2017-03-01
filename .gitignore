@@ -1,0 +1,6 @@
+cmake-build-debug/
+label_02/
+src/.idea/
+
+kitti_eval
+kitti_objects.txt
